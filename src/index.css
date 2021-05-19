@@ -1,0 +1,12 @@
+body {
+    margin: 0;
+}
+
+.Pointer {
+  cursor: pointer;
+}
+
+.Link {
+  cursor: pointer;
+  text-decoration: underline;
+}
