@@ -1,4 +1,8 @@
-.App-header {
+.app-header {
     padding: 1rem;
     background-color: antiquewhite;
+}
+
+.nav li a.active {
+  font-weight: bold;
 }

@@ -1,6 +1,10 @@
 import './App.css';
-import RemCalculator from './RemCalculator';
 import { Component } from 'react';
+import Home from './Home';
+import { Route } from 'react-router';
+import { Link, NavLink } from 'react-router-dom';
+import About from './About';
+import RemCalculator from './RemCalculator';
 
 class App extends Component {
     state = {
@@ -48,24 +52,19 @@ class App extends Component {
 
     render() {
         return (
-            <div className="App">
-                <header className="App-header">
+            <div className="app">
+                <header className="app-header">
                     Welcome
                 </header>
-                <ul>
-                    <li className="Link" onClick={this.showHome}>Home</li>
-                    <li className="Link" onClick={this.showRemCalculator}>rem 계산기</li>
+                <ul className="nav">
+                    <li><NavLink exact to="/" activeClassName="active">Home</NavLink></li>
+                    <li><NavLink exact to="/about" activeClassName="active">About</NavLink></li>
+                    <li><NavLink exact to="/rem" activeClassName="active">rem 계산기</NavLink></li>
                 </ul>
-                {   
-                    this.state.menuList.home
-                    ?(<div>Hello</div>)
-                    :(<div></div>)
-                }
-                {
-                    this.state.menuList.showRemCalculator
-                    ?<RemCalculator/>
-                    :(<div></div>)
-                }
+                <Route exact path="/" component={Home}/>
+                <Route exact path="/about" component={About}></Route>
+                <Route exact path="/rem" component={RemCalculator}></Route>
+            
             </div>
         )
     }
