@@ -10,21 +10,18 @@ class RemCalculator extends Component {
         inputData: 0,
         result: 0,
     };
-        // componentWillMount() {
-    //     console.log('componentWillMount (deprecated)');
-    // }
 
     constructor(props) {
         super(props);
-        console.log('constructor');
+        console.log("Start RemCalculator");
     }
 
     componentDidMount() {
-        console.log('componentDidMount');
+        // console.log('componentDidMount');
     }
 
     shouldComponentUpdate(nextProps, nextState) {
-        console.log('shouldComponentUpdate');
+        // console.log('shouldComponentUpdate');
         // if (nextState.number % 5 === 0) return false;
         return true;
     }
@@ -34,7 +31,7 @@ class RemCalculator extends Component {
     // }
 
     componentDidUpdate(prevProps, prevState) {
-        console.log('componentDidUpdate');
+        // console.log('componentDidUpdate');
     }
 
     calculateResult = () => {
